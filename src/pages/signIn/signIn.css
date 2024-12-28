@@ -1,0 +1,114 @@
+.sign-in-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #04051E;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 1em;
+    text-align: center;
+}
+
+.header-container p {
+    font-size: 5rem;
+    max-width: 800px;
+    font-weight: 500;
+    color: #D0D3DE;
+}
+
+.main-text-container {
+    margin-top: -5em;
+    font-size: 1.15rem;
+    max-width: 700px;
+    font-weight: 300;
+    color: #D0D3DE;
+}
+
+.sign-in-btn {
+    border-radius: 50px;
+    padding: 0.6em 1em;
+    font-size: 1rem;
+    background: #06082f;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: #fff;
+    border: none;
+}
+
+.sign-in-btn:hover {
+    background-color: #0b0d4c;
+    cursor: pointer;
+}
+
+.circle-left,
+.circle-right {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.circle-left {
+    bottom: 0;
+    left: -30px;
+    border-radius: 50% 50% 50% 0;
+}
+
+.circle-right {
+    top: -50px;
+    right: -80px;
+    border-radius: 50% 0 50% 50%;
+}
+
+@media (max-width:800px) {
+    .header-container p {
+        font-size: 4rem;
+    }
+
+    .main-text-container {
+        font-size: 1rem;
+    }
+
+    .circle-left,
+    .circle-right {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width:615px) {
+    .header-container p {
+        font-size: 3rem;
+    }
+
+    .main-text-container {
+        font-size: 1rem;
+        margin-top: -4em;
+    }
+
+    .circle-left,
+    .circle-right {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width:525px) {
+    .header-container p {
+        font-size: 2.3rem;
+    }
+
+    .main-text-container, .sign-in-btn {
+        font-size: 0.9rem;
+    }
+}
