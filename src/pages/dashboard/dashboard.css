@@ -1,0 +1,78 @@
+.dashboard-container {
+    background-color: #04051E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.transactions {
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+}
+
+.form-container, .recent-transactions {
+    border: 2px solid #06072d;
+    padding: 1em;
+}
+
+.form-container {
+    flex: 2;
+}
+
+.recent-transactions {
+    flex: 3;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    color: #D0D3DE;
+}
+
+form input {
+    background-color: #06072d;
+    border: none;
+    height: 25px;
+    padding: 0.3em;
+    color: #D0D3DE;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.radio-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+}
+
+form select {
+    background-color: #06072d;
+    height: 25px;
+    color: #D0D3DE;
+}
+
+.add-button {
+    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
+    border: none;
+    height: 25px;
+    color: #D0D3DE;
+
+} 
+
+.add-button:hover{
+    cursor: pointer;
+}

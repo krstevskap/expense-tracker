@@ -13,17 +13,19 @@ const SignIn = () => {
     const userInfo = {
       userId: res.user.uid,
       name: res.user.displayName,
+      photo: res.user.photoURL,
       isAuth: true,
     };
 
     localStorage.setItem("auth", JSON.stringify(userInfo));
     navigate("/dashboard");
   };
+
   return (
     <div className="sign-in-container">
       <div className="circle-left"></div>
       <div className="circle-right"></div>
-      <div className="header-container">
+      <div className="sign-in-header-container">
         <p>Track your expenses</p>
       </div>
       <div className="main-text-container">

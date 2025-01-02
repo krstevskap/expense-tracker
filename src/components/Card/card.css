@@ -1,0 +1,23 @@
+.card-container {
+    background-color: #06072d;
+    color: #D0D3DE;
+    padding: 1em;
+    border-radius: 30px;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+    justify-content: center;
+    border-width: 5px 5px 5px 5px;
+    border-image: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
+    border-image-slice: 9;
+    border-style: solid;
+}
+
+h1,
+h3 {
+    margin: 0;
+    padding: 0;
+}
