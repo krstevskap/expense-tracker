@@ -1,0 +1,44 @@
+.add-transaction-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #D0D3DE;
+    height: 350px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-input input, .form-input select, .form-input option {
+    background-color: #06072d;
+    border: none;
+    height: 30px;
+    color: #D0D3DE;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.radio-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+}
+
+.add-button {
+    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
+    border: none;
+    height: 35px;
+    color: #D0D3DE;
+} 
+
+.add-button:hover{
+    cursor: pointer;
+}

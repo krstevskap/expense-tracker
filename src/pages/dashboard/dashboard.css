@@ -3,7 +3,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1.5em;
 }
 
 .cards {
@@ -19,8 +19,9 @@
 }
 
 .form-container, .recent-transactions {
-    border: 2px solid #06072d;
+    border: 2px solid #8236B0;
     padding: 1em;
+    height: 380px;
 }
 
 .form-container {
@@ -29,50 +30,4 @@
 
 .recent-transactions {
     flex: 3;
-}
-
-.form-container form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    color: #D0D3DE;
-}
-
-form input {
-    background-color: #06072d;
-    border: none;
-    height: 25px;
-    padding: 0.3em;
-    color: #D0D3DE;
-}
-
-.title {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.radio-button-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: none;
-}
-
-form select {
-    background-color: #06072d;
-    height: 25px;
-    color: #D0D3DE;
-}
-
-.add-button {
-    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
-    border: none;
-    height: 25px;
-    color: #D0D3DE;
-
-} 
-
-.add-button:hover{
-    cursor: pointer;
 }
