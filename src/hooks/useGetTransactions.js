@@ -4,27 +4,37 @@ import { db } from "../config/firebase-config";
 
 export const useGetTransactions = () => {
   const [transactions, setTransactions] = useState([]);
+  const transactionsCollection = collection(db, "transactions");
   const userInfo = JSON.parse(localStorage.getItem("auth"));
 
   useEffect(() => {
-    if (!userInfo) return;
+    const getTransactions = async () => {
+      try {
+        const queryData = query(
+          transactionsCollection,
+          where("userID", "==", userInfo.userId)
+        );
 
-    const transactionsCollection = collection(db, "transactions");
-    const queryData = query(
-      transactionsCollection,
-      where("userID", "==", userInfo.userId)
-    );
+        const unsubscribe = onSnapshot(queryData, (snapshot) => {
+          let docs = [];
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            const id = doc.id;
 
-    const unsubscribe = onSnapshot(queryData, (snapshot) => {
-      const docs = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setTransactions(docs);
-    });
+            docs.push({ ...data, id });
+          });
 
-    return () => unsubscribe();
-  }, [userInfo]);
+          setTransactions(docs);
+        });
+
+        return () => unsubscribe();
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    getTransactions();
+  }, []);
 
   return { transactions };
 };
