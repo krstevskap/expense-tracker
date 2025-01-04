@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import {
+  collection,
+  limit,
+  onSnapshot,
+  query,
+  where,
+  orderBy,
+} from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
 export const useGetTransactions = () => {
@@ -12,7 +19,9 @@ export const useGetTransactions = () => {
       try {
         const queryData = query(
           transactionsCollection,
-          where("userID", "==", userInfo.userId)
+          where("userID", "==", userInfo.userId),
+          orderBy("timestamp", "desc"),
+          limit(3)
         );
 
         const unsubscribe = onSnapshot(queryData, (snapshot) => {

@@ -5,13 +5,13 @@
     gap: 1em;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #04051E;
     position: relative;
     z-index: 0;
-    overflow: hidden;
     padding: 1em;
     text-align: center;
+    overflow: hidden;
 }
 
 .sign-in-header-container p {
@@ -48,28 +48,6 @@
     cursor: pointer;
 }
 
-.circle-left,
-.circle-right {
-    position: absolute;
-    width: 600px;
-    height: 400px;
-    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
-    z-index: -1;
-    filter: blur(50px);
-}
-
-.circle-left {
-    bottom: 0;
-    left: -30px;
-    border-radius: 50% 50% 50% 0;
-}
-
-.circle-right {
-    top: -50px;
-    right: -80px;
-    border-radius: 50% 0 50% 50%;
-}
-
 @media (max-width:800px) {
     .sign-in-header-container p {
         font-size: 4rem;
@@ -95,12 +73,6 @@
         font-size: 1rem;
         margin-top: -4em;
     }
-
-    .circle-left,
-    .circle-right {
-        width: 400px;
-        height: 300px;
-    }
 }
 
 @media (max-width:525px) {
@@ -108,7 +80,8 @@
         font-size: 2.3rem;
     }
 
-    .main-text-container, .sign-in-btn {
+    .main-text-container,
+    .sign-in-btn {
         font-size: 0.9rem;
     }
 }

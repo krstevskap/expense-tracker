@@ -3,31 +3,54 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 2em;
 }
 
 .cards {
     display: flex;
-    justify-content: space-around;
-    gap: 1em;
+    gap: 0.5em;
+    padding: 0 0.5em;
 }
 
-.transactions {
+.cards div {
+    flex: 1;
+}
+
+.user-card {
+    color: #8336b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-card h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-container,
+.top-container {
     display: flex;
     gap: 2em;
-    padding: 1em;
+    padding: 0 2em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.form-container, .recent-transactions {
-    border: 2px solid #8236B0;
+.form-container,
+.recent-transactions {
+    background-color: #06072d;
     padding: 1em;
     height: 380px;
 }
 
-.form-container {
+.form-container,
+.user-card {
     flex: 2;
 }
 
-.recent-transactions {
+.recent-transactions,
+.cards {
     flex: 3;
 }

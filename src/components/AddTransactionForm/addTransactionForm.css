@@ -1,4 +1,4 @@
-.add-transaction-form form{
+.add-transaction-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,8 +12,10 @@
     gap: 1em;
 }
 
-.form-input input, .form-input select, .form-input option {
-    background-color: #06072d;
+.form-input input,
+.form-input select,
+.form-input option {
+    background-color: #04051E;
     border: none;
     height: 30px;
     color: #D0D3DE;
@@ -25,7 +27,7 @@
     text-align: center;
 }
 
-.radio-button-container{
+.radio-button-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -33,12 +35,12 @@
 }
 
 .add-button {
-    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgba(46, 55, 106, 1) 100%);
+    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgb(36, 140, 201) 100%);
     border: none;
     height: 35px;
     color: #D0D3DE;
-} 
+}
 
-.add-button:hover{
+.add-button:hover {
     cursor: pointer;
 }

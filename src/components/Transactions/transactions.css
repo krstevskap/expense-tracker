@@ -4,8 +4,28 @@
     gap: 1.5em;
 }
 
-.title {
+.transactions-container .title {
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #D0D3DE;
+}
+
+.transactions-table {
+    color: #D0D3DE;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.transaction {
+    display: flex;
+    padding: 0.8em;
+    justify-content: space-between;
+    background-color: #04051E;
+    color: #D0D3DE;
+}
+
+.transactions-table div {
+    flex: 1;
 }
