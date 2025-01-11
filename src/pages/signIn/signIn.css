@@ -5,11 +5,10 @@
     gap: 1em;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #04051E;
     position: relative;
     z-index: 0;
-    padding: 1em;
     text-align: center;
     overflow: hidden;
 }

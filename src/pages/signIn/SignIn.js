@@ -23,8 +23,8 @@ const SignIn = () => {
 
   return (
     <div className="sign-in-container">
-      <div className="circle-left"></div>
-      <div className="circle-right"></div>
+      {/* <div className="circle-left"></div> */}
+      {/* <div className="circle-right"></div> */}
       <div className="sign-in-header-container">
         <p>Track your expenses</p>
       </div>

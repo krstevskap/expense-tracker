@@ -17,8 +17,8 @@
     font-size: 1rem;
 }
 
-.header-right{
-    width: 200px;
+.header-right {
+    width: 250px;
     height: 40px;
     background-color: #06072d;
     display: flex;
@@ -27,4 +27,14 @@
     padding: 0.3em;
     border-radius: 50px;
     gap: 1em;
+}
+
+.sign-out-btn {
+    color: #D0D3DE;
+    font-size: 1.5rem;
+}
+
+.sign-out-btn:hover {
+    cursor: pointer;
+    color: #8336b1;
 }
