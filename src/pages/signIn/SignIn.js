@@ -1,7 +1,7 @@
 import React from "react";
 import { auth, provider } from "../../config/firebase-config";
 import { signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import "./signIn.css";
 
@@ -21,10 +21,14 @@ const SignIn = () => {
     navigate("/dashboard");
   };
 
+  if (localStorage.getItem("auth")) {
+    return <Navigate to="/dashboard" />;
+  }
+
   return (
     <div className="sign-in-container">
-      {/* <div className="circle-left"></div> */}
-      {/* <div className="circle-right"></div> */}
+      <div className="circle-left"></div>
+      <div className="circle-right"></div>
       <div className="sign-in-header-container">
         <p>Track your expenses</p>
       </div>

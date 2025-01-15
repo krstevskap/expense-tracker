@@ -20,6 +20,28 @@
     color: #D0D3DE;
 }
 
+.circle-left,
+.circle-right {
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    background: linear-gradient(90deg, #af46ec 0%, #3730ff 100%);
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.circle-left {
+    bottom: -20px;
+    left: -10px;
+    border-radius: 50% 50% 30% 0;
+}
+
+.circle-right {
+    top: -20px;
+    right: -20px;
+    border-radius: 50% 0 50% 50%;
+}
+
 .main-text-container {
     margin-top: -5em;
     font-size: 1.15rem;
@@ -58,8 +80,8 @@
 
     .circle-left,
     .circle-right {
-        width: 500px;
-        height: 300px;
+        width: 400px;
+        height: 200px;
     }
 }
 

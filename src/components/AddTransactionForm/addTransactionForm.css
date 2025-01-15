@@ -35,7 +35,7 @@
 }
 
 .add-button {
-    background: linear-gradient(90deg, rgba(131, 54, 177, 1) 0%, rgb(36, 140, 201) 100%);
+    background: linear-gradient(90deg, #af46ec 0%, #3730ff 100%);
     border: none;
     height: 35px;
     color: #D0D3DE;
