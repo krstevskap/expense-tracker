@@ -4,9 +4,11 @@ import Header from "../../components/Header/Header";
 import Card from "../../components/Card/Card";
 import Transactions from "../../components/Transactions/Transactions";
 import AddTransactionForm from "../../components/AddTransactionForm/AddTransactionForm";
+import { useGetTransactions } from "../../hooks/useGetTransactions";
 
 const Dashboard = () => {
   const userInfo = JSON.parse(localStorage.getItem("auth"));
+  const { totalTransactionAmount } = useGetTransactions();
   return (
     <div className="dashboard-container">
       <Header />
@@ -18,13 +20,16 @@ const Dashboard = () => {
         </div>
         <div className="cards">
           <div>
-            <Card title="Current balance" amount="$0.00" />
+            <Card
+              title="Total balance"
+              amount={totalTransactionAmount.totalBalance}
+            />
           </div>
           <div>
-            <Card title="Income" amount="$0.00" />
+            <Card title="Income" amount={totalTransactionAmount.income} />
           </div>
           <div>
-            <Card title="Expense" amount="$0.00" />
+            <Card title="Expense" amount={totalTransactionAmount.expense} />
           </div>
         </div>
       </div>

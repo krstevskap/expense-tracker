@@ -28,14 +28,19 @@ const AddTransactionForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(userInfo.userId);
+
     addTransaction({
       userID: userInfo.userId,
       description,
-      transactionAmount,
+      transactionAmount: parseFloat(transactionAmount),
       transactionType,
       category,
     });
+
+    setCategory("");
+    setDescription("");
+    setTransactionAmount("");
+    setTransactionType("expense");
   };
   return (
     <div className="add-transaction-form">
@@ -46,12 +51,14 @@ const AddTransactionForm = () => {
             type="text"
             placeholder="Description"
             required
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <input
             type="number"
             placeholder="Amount"
             required
+            value={transactionAmount}
             onChange={(e) => setTransactionAmount(e.target.value)}
           />
           <div className="radio-button-container">
