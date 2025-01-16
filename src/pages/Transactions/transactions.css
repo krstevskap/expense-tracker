@@ -1,0 +1,22 @@
+.all-transactions-container {
+    background-color: #04051E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.transactions-container,
+.transactions-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transactions-container {
+    gap: 0.7em;
+    color: #D0D3DE;
+}
+
+.transactions-table {
+    width: 100%;
+}

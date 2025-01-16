@@ -29,14 +29,17 @@ const Header = () => {
       </div>
 
       <div className="header-middle">
-        <div className="header-category">
+        <div className="header-category" onClick={() => navigate("/dashboard")}>
           <div className="header-icon">
             <MdOutlineDashboard />
           </div>
           <div className="header-text">Dashboard</div>
         </div>
 
-        <div className="header-category">
+        <div
+          className="header-category"
+          onClick={() => navigate("/transactions")}
+        >
           <div className="header-icon">
             <GrTransaction />
           </div>

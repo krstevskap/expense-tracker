@@ -1,16 +1,16 @@
 import React from "react";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
-import "./transactions.css";
+import "./recentTransactions.css";
 
 const Transactions = () => {
-  const { transactions } = useGetTransactions();
+  const { transactions } = useGetTransactions(true);
   return (
-    <div className="transactions-container">
-      <h2 className="title">Recent Transactions</h2>
-      <div className="transactions-table">
+    <div className="recent-transactions-container">
+      <h2 className="recent-transactions-title">Recent Transactions</h2>
+      <div className="recent-transactions-table">
         {transactions.map((t) => {
           return (
-            <div className="transaction">
+            <div className="recent-transaction">
               <p>{t.description}</p>
               <p>{t.category}</p>
               <p

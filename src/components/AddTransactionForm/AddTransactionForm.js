@@ -59,7 +59,7 @@ const AddTransactionForm = () => {
             placeholder="Amount"
             required
             value={transactionAmount}
-            onChange={(e) => setTransactionAmount(e.target.value)}
+            onChange={(e) => setTransactionAmount(parseFloat(e.target.value))}
           />
           <div className="radio-button-container">
             <label htmlFor="expense">Expense</label>

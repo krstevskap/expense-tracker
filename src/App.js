@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
 import SignIn from "./pages/signIn/SignIn";
+import Transactions from "./pages/Transactions/Transactions";
 
 function App() {
   const isAuthenticated = localStorage.getItem("auth");
@@ -26,6 +27,15 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/transactions"
+            exact
+            element={
+              <PrivateRoute>
+                <Transactions />
               </PrivateRoute>
             }
           />

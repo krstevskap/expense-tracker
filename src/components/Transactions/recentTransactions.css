@@ -1,26 +1,25 @@
-.transactions-container {
+.recent-transactions-container {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
 }
 
-.transactions-container .title {
+.recent-transactions-title {
     margin: 0;
     padding: 0;
     text-align: center;
     color: #D0D3DE;
 }
 
-.transactions-table {
+.recent-transactions-table {
     color: #D0D3DE;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    height: 300px;
-    overflow-y: scroll;
+    height: 270px;
 }
 
-.transaction {
+.recent-transaction {
     display: flex;
     padding: 0.8em;
     justify-content: space-between;

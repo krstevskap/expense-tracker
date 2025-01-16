@@ -9,7 +9,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
-export const useGetTransactions = () => {
+export const useGetTransactions = (limitResults = false) => {
   const [transactions, setTransactions] = useState([]);
   const [totalTransactionAmount, setTotalTransactionAmount] = useState({
     totalBalance: 0.0,
@@ -23,11 +23,22 @@ export const useGetTransactions = () => {
   useEffect(() => {
     const getTransactions = async () => {
       try {
-        const queryData = query(
-          transactionsCollection,
-          where("userID", "==", userInfo.userId),
-          orderBy("timestamp", "desc")
-        );
+        let queryData;
+
+        if (limitResults) {
+          queryData = query(
+            transactionsCollection,
+            where("userID", "==", userInfo.userId),
+            orderBy("timestamp", "desc"),
+            limit(3)
+          );
+        } else {
+          queryData = query(
+            transactionsCollection,
+            where("userID", "==", userInfo.userId),
+            orderBy("timestamp", "desc")
+          );
+        }
 
         const unsubscribe = onSnapshot(queryData, (snapshot) => {
           let docs = [];

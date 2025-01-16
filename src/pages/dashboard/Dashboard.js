@@ -2,7 +2,7 @@ import React from "react";
 import "./dashboard.css";
 import Header from "../../components/Header/Header";
 import Card from "../../components/Card/Card";
-import Transactions from "../../components/Transactions/Transactions";
+import Transactions from "../../components/Transactions/RecentTransactions";
 import AddTransactionForm from "../../components/AddTransactionForm/AddTransactionForm";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
 
