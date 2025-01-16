@@ -1,9 +1,12 @@
 .header-container {
-    height: 50px;
-    padding: 1em;
+    height: 40px;
+    padding: 0.5em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    background-color: #06072D;
+    color: #D0D3DE;
+    font-size: 1rem;
 }
 
 .header-container img {
@@ -12,29 +15,53 @@
     border-radius: 50%;
 }
 
-.name {
-    color: #D0D3DE;
-    font-size: 1rem;
-}
-
-.header-right {
-    width: 250px;
-    height: 40px;
-    background-color: #06072d;
+.header-left {
     display: flex;
+    gap: 1em;
     justify-content: center;
     align-items: center;
-    padding: 0.3em;
-    border-radius: 50px;
-    gap: 1em;
-}
-
-.sign-out-btn {
-    color: #D0D3DE;
-    font-size: 1.5rem;
+    padding-left: 1em
 }
 
 .sign-out-btn:hover {
     cursor: pointer;
     color: #af46ec;
+}
+
+.sign-out-btn {
+    padding-right: 1em;
+}
+
+.header-middle {
+    display: flex;
+    gap: 0.5em;
+}
+
+.header-category {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+}
+
+.header-category:hover {
+    background-color: #0a0c4b;
+    cursor: pointer;
+}
+
+.header-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-icon {
+        display: block;
+    }
+
+    .header-text {
+        display: none;
+    }
+
+    .name {
+        display: none;
+    }
 }

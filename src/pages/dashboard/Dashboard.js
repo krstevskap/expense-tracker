@@ -12,34 +12,35 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <Header />
+      <div className="main-container">
+        <div className="top-container">
+          <div className="user-card">
+            <h1>Welcome back,</h1>
+            <h1>{userInfo.name}!</h1>
+          </div>
+          <div className="cards">
+            <div>
+              <Card
+                title="Total balance"
+                amount={totalTransactionAmount.totalBalance}
+              />
+            </div>
+            <div>
+              <Card title="Income" amount={totalTransactionAmount.income} />
+            </div>
+            <div>
+              <Card title="Expense" amount={totalTransactionAmount.expense} />
+            </div>
+          </div>
+        </div>
 
-      <div className="top-container">
-        <div className="user-card">
-          <h1>Welcome back,</h1>
-          <h1>{userInfo.name}!</h1>
-        </div>
-        <div className="cards">
-          <div>
-            <Card
-              title="Total balance"
-              amount={totalTransactionAmount.totalBalance}
-            />
+        <div className="bottom-container">
+          <div className="form-container">
+            <AddTransactionForm />
           </div>
-          <div>
-            <Card title="Income" amount={totalTransactionAmount.income} />
+          <div className="recent-transactions">
+            <Transactions />
           </div>
-          <div>
-            <Card title="Expense" amount={totalTransactionAmount.expense} />
-          </div>
-        </div>
-      </div>
-
-      <div className="bottom-container">
-        <div className="form-container">
-          <AddTransactionForm />
-        </div>
-        <div className="recent-transactions">
-          <Transactions />
         </div>
       </div>
     </div>
