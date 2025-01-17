@@ -8,6 +8,7 @@ import {
 import Dashboard from "./pages/dashboard/Dashboard";
 import SignIn from "./pages/signIn/SignIn";
 import Transactions from "./pages/Transactions/Transactions";
+import AddTransaction from "./pages/AddForm/AddTransaction";
 
 function App() {
   const isAuthenticated = localStorage.getItem("auth");
@@ -36,6 +37,15 @@ function App() {
             element={
               <PrivateRoute>
                 <Transactions />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/add-transaction"
+            exact
+            element={
+              <PrivateRoute>
+                <AddTransaction />
               </PrivateRoute>
             }
           />

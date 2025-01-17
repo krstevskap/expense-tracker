@@ -58,10 +58,6 @@ export const useGetTransactions = (limitResults = false) => {
             } else if (data.transactionType === "expense") {
               totalExpense += amount;
             }
-
-            console.log(
-              `Type: ${data.transactionType}, Amount: ${data.transactionAmount}`
-            );
           });
 
           setTransactions(docs);

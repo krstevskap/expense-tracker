@@ -35,9 +35,6 @@ const Dashboard = () => {
         </div>
 
         <div className="bottom-container">
-          <div className="form-container">
-            <AddTransactionForm />
-          </div>
           <div className="recent-transactions">
             <Transactions />
           </div>

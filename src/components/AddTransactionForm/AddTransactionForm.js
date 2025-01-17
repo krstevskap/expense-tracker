@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAddTransaction } from "../../hooks/useAddTransaction";
 import "./addTransactionForm.css";
 
-const AddTransactionForm = () => {
+const AddTransactionForm = ({ toggleModal }) => {
   let categories = [
     "Food & Groceries",
     "Rent",
@@ -22,7 +22,7 @@ const AddTransactionForm = () => {
   const userInfo = JSON.parse(localStorage.getItem("auth"));
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [transactionAmount, setTransactionAmount] = useState(0);
+  const [transactionAmount, setTransactionAmount] = useState("");
   const [transactionType, setTransactionType] = useState("expense");
   const { addTransaction } = useAddTransaction();
 
@@ -41,24 +41,29 @@ const AddTransactionForm = () => {
     setDescription("");
     setTransactionAmount("");
     setTransactionType("expense");
+    toggleModal();
   };
+
   return (
     <div className="add-transaction-form">
       <form onSubmit={onSubmit}>
         <h2 className="title">Add Transaction</h2>
         <div className="form-input">
+          <label for="description">Description</label>
           <input
             type="text"
-            placeholder="Description"
             required
             value={description}
+            id="description"
             onChange={(e) => setDescription(e.target.value)}
           />
+          <label for="amount">Amount</label>
           <input
             type="number"
-            placeholder="Amount"
             required
             value={transactionAmount}
+            min="0"
+            id="amount"
             onChange={(e) => setTransactionAmount(parseFloat(e.target.value))}
           />
           <div className="radio-button-container">
@@ -79,10 +84,12 @@ const AddTransactionForm = () => {
               onChange={(e) => setTransactionType(e.target.value)}
             />
           </div>
+          <label for="category">Category</label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
+            id="category"
           >
             <option value="" disabled>
               Select Category

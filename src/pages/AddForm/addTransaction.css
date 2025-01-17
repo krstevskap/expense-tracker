@@ -1,0 +1,67 @@
+.add-transaction-container {
+    background-color: #04051E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.add-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+    background-color: #06072d;
+    padding: 1em;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #D0D3DE;
+    height: 150px;
+    gap: 1em;
+    padding: 1.5em;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    background-color: #06072d;
+}
+
+.overlay {
+    background: #04051ee7;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.buttons button {
+    border: none;
+    background-color: #04051E;
+    padding: 0.5em;
+    color: #D0D3DE;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color: #0a0c4b;
+}
+
+@media (max-width: 670px) {
+    .form {
+        width: 70%;
+    }
+}

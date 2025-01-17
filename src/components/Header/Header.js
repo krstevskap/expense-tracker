@@ -46,7 +46,10 @@ const Header = () => {
           <div className="header-text">Transactions</div>
         </div>
 
-        <div className="header-category">
+        <div
+          className="header-category"
+          onClick={() => navigate("/add-transaction")}
+        >
           <div className="header-icon">
             <IoMdAddCircleOutline />
           </div>
