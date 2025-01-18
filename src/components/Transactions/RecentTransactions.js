@@ -10,7 +10,7 @@ const Transactions = () => {
       <div className="recent-transactions-table">
         {transactions.map((t) => {
           return (
-            <div className="recent-transaction">
+            <div className="recent-transaction" key={t.id}>
               <p>{t.description}</p>
               <p>{t.category}</p>
               <p

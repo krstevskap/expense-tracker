@@ -23,7 +23,7 @@ const TransactionsTable = ({ rows, columns }) => {
         pagination
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
-        pageSizeOptions={[5, 10]}
+        pageSizeOptions={[5, 8, 10]}
         checkboxSelection
         rowHeight={50}
         sx={{

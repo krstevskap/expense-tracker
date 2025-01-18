@@ -3,6 +3,7 @@ import { auth, provider } from "../../config/firebase-config";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate, Navigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { initializeCollections } from "./initializeCollections";
 import "./signIn.css";
 
 const SignIn = () => {
@@ -18,6 +19,8 @@ const SignIn = () => {
     };
 
     localStorage.setItem("auth", JSON.stringify(userInfo));
+    await initializeCollections(userInfo.userId);
+
     navigate("/dashboard");
   };
 

@@ -49,7 +49,7 @@ const AddTransactionForm = ({ toggleModal }) => {
       <form onSubmit={onSubmit}>
         <h2 className="title">Add Transaction</h2>
         <div className="form-input">
-          <label for="description">Description</label>
+          <label htmlFor="description">Description</label>
           <input
             type="text"
             required
@@ -57,7 +57,7 @@ const AddTransactionForm = ({ toggleModal }) => {
             id="description"
             onChange={(e) => setDescription(e.target.value)}
           />
-          <label for="amount">Amount</label>
+          <label htmlFor="amount">Amount</label>
           <input
             type="number"
             required
@@ -84,7 +84,7 @@ const AddTransactionForm = ({ toggleModal }) => {
               onChange={(e) => setTransactionType(e.target.value)}
             />
           </div>
-          <label for="category">Category</label>
+          <label htmlFor="category">Category</label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}

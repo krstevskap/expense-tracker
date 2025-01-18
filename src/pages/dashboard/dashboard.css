@@ -60,3 +60,37 @@
 .cards {
     flex: 3;
 }
+
+.categories-container {
+    flex: 2;
+    background-color: #06072d;
+    padding: 1em;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.categories {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.category {
+    background-color: #04051E;
+    height: 30px;
+    color: #D0D3DE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.categories-container h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #D0D3DE;
+}

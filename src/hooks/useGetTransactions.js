@@ -4,7 +4,6 @@ import {
   limit,
   onSnapshot,
   query,
-  where,
   orderBy,
 } from "firebase/firestore";
 import { db } from "../config/firebase-config";
@@ -17,8 +16,14 @@ export const useGetTransactions = (limitResults = false) => {
     expense: 0.0,
   });
 
-  const transactionsCollection = collection(db, "transactions");
   const userInfo = JSON.parse(localStorage.getItem("auth"));
+
+  const transactionsCollection = collection(
+    db,
+    "users",
+    userInfo.userId,
+    "transactions"
+  );
 
   useEffect(() => {
     const getTransactions = async () => {
@@ -28,14 +33,12 @@ export const useGetTransactions = (limitResults = false) => {
         if (limitResults) {
           queryData = query(
             transactionsCollection,
-            where("userID", "==", userInfo.userId),
             orderBy("timestamp", "desc"),
             limit(3)
           );
         } else {
           queryData = query(
             transactionsCollection,
-            where("userID", "==", userInfo.userId),
             orderBy("timestamp", "desc")
           );
         }
@@ -78,7 +81,7 @@ export const useGetTransactions = (limitResults = false) => {
     };
 
     getTransactions();
-  }, []);
+  }, [limitResults]);
 
   return { transactions, totalTransactionAmount };
 };
