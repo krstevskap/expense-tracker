@@ -34,7 +34,7 @@ export const useGetTransactions = (limitResults = false) => {
           queryData = query(
             transactionsCollection,
             orderBy("timestamp", "desc"),
-            limit(3)
+            limit(5)
           );
         } else {
           queryData = query(

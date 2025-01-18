@@ -4,6 +4,7 @@ import "./recentTransactions.css";
 
 const Transactions = () => {
   const { transactions } = useGetTransactions(true);
+
   return (
     <div className="recent-transactions-container">
       <h2 className="recent-transactions-title">Recent Transactions</h2>
@@ -19,8 +20,8 @@ const Transactions = () => {
                 }}
               >
                 {t.transactionType === "income"
-                  ? `+ $${t.transactionAmount}`
-                  : `- $${t.transactionAmount}`}
+                  ? `+ ${t.transactionAmount} $`
+                  : `- ${t.transactionAmount} $`}
               </p>
             </div>
           );

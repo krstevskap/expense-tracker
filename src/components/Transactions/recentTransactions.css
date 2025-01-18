@@ -1,42 +1,32 @@
 .recent-transactions-container {
+    height: 100%;
+    gap: 1em;
+}
+
+.recent-transactions-container,
+.recent-transactions-table {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    color: #D0D3DE;
 }
 
 .recent-transactions-title {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #D0D3DE;
+    flex: 1;
 }
 
 .recent-transactions-table {
-    color: #D0D3DE;
-    display: flex;
-    flex-direction: column;
     gap: 1em;
-    height: 270px;
+    flex: 3;
 }
 
 .recent-transaction {
     display: flex;
-    padding: 0.8em;
+    padding: 0.5em;
     justify-content: space-between;
     align-items: center;
     background-color: #04051E;
-    color: #D0D3DE;
-    height: 50px;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #04051E;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #D0D3DE;
+    height: 35px;
 }
