@@ -21,16 +21,31 @@ const Dashboard = () => {
             <h1>{userInfo.name}!</h1>
           </div>
           <div className="cards">
-            <div>
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, rgb(183, 157, 254) 0%, rgb(117, 110, 254) 100%)",
+              }}
+            >
               <Card
                 title="Total balance"
                 amount={totalTransactionAmount.totalBalance}
               />
             </div>
-            <div>
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, rgb(250, 205, 175) 0%, rgb(254, 129, 122) 100%)",
+              }}
+            >
               <Card title="Income" amount={totalTransactionAmount.income} />
             </div>
-            <div>
+            <div
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, rgb(252, 180, 222) 0%, rgb(254, 104, 186) 100%)",
+              }}
+            >
               <Card title="Expense" amount={totalTransactionAmount.expense} />
             </div>
           </div>
